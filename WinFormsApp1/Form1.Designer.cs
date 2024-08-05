@@ -32,6 +32,7 @@ partial class Form1
         richTextBox1 = new RichTextBox();
         btnCounter = new Button();
         textBoxCounter = new TextBox();
+        richTextBox2 = new RichTextBox();
         SuspendLayout();
         // 
         // BtnReadFile
@@ -51,10 +52,11 @@ partial class Form1
         richTextBox1.Size = new Size(100, 96);
         richTextBox1.TabIndex = 1;
         richTextBox1.Text = "";
+        richTextBox1.TextChanged += richTextBox1_TextChanged;
         // 
         // btnCounter
         // 
-        btnCounter.Location = new Point(532, 88);
+        btnCounter.Location = new Point(201, 58);
         btnCounter.Name = "btnCounter";
         btnCounter.Size = new Size(75, 23);
         btnCounter.TabIndex = 2;
@@ -64,16 +66,25 @@ partial class Form1
         // 
         // textBoxCounter
         // 
-        textBoxCounter.Location = new Point(370, 118);
+        textBoxCounter.Location = new Point(201, 88);
         textBoxCounter.Name = "textBoxCounter";
         textBoxCounter.Size = new Size(100, 23);
         textBoxCounter.TabIndex = 3;
+        // 
+        // richTextBox2
+        // 
+        richTextBox2.Location = new Point(324, 87);
+        richTextBox2.Name = "richTextBox2";
+        richTextBox2.Size = new Size(181, 171);
+        richTextBox2.TabIndex = 4;
+        richTextBox2.Text = "";
         // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
+        Controls.Add(richTextBox2);
         Controls.Add(textBoxCounter);
         Controls.Add(btnCounter);
         Controls.Add(richTextBox1);
@@ -90,4 +101,6 @@ partial class Form1
     private RichTextBox richTextBox1;
     private Button btnCounter;
     private TextBox textBoxCounter;
+    private Button deleteBtn;
+    private RichTextBox richTextBox2;
 }
